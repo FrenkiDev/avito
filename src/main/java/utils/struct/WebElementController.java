@@ -4,6 +4,7 @@ import utils.IClikc;
 import utils.ISendText;
 
 public class WebElementController {
+
     public static boolean sendText(ISendText element, String text){
         return element.sendText(text);
     }

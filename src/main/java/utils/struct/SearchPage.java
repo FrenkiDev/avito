@@ -7,9 +7,10 @@ import utils.ISendText;
 
 public class SearchPage extends Page implements IClikc, ISendText {
     @FindBy(xpath = "//*[@id=\"text\"]")
+    private
     WebElement inputSearch;
     @FindBy(xpath = "//button[span[contains(text(),\"Найти\")]]")
-    WebElement btnSearch;
+    private WebElement btnSearch;
 
     @Override
     public boolean click() {
@@ -18,6 +19,6 @@ public class SearchPage extends Page implements IClikc, ISendText {
 
     @Override
     public boolean sendText(String text) {
-        return WebElementAction.sendText(inputSearch, "Гугл");
+        return WebElementAction.sendText(inputSearch, text);
     }
 }
